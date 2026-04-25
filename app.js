@@ -1,4 +1,4 @@
-const API_URL = "https://api.medlight.tech/calculate";
+const API_URL = `${import.meta.env.VITE_API_BASE_URL}/api/calculate`;
 
 const fields = [
   { key: "Age", options: [80,75,70,65,60,55,50,45,40,35,30,25], defaultIndex: 6 },
