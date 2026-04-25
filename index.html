@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nomogram Calculator</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="container">
+
+    <div class="card">
+      <h2>Nomogram Points Calculator</h2>
+      <p class="hint">Select the scale of each variable from the dropdown → Backend calculates Points → Sum to get Total Points</p>
+
+      <div id="form"></div>
+
+      <button onclick="resetForm()">Reset</button>
+    </div>
+
+    <div class="card">
+      <h2>Total Points</h2>
+      <div id="totalPoints" class="total">0 pts</div>
+    </div>
+
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
