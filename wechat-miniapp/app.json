@@ -1,0 +1,9 @@
+{
+  "pages": ["pages/index/index"],
+  "window": {
+    "navigationBarTitleText": "列线图评分 · 测试版",
+    "navigationBarBackgroundColor": "#f5f7fb",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f5f7fb"
+  }
+}

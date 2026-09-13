@@ -1,0 +1,17 @@
+.container { max-width: 960rpx; margin: 0 auto; padding: 28rpx; padding-bottom: 72rpx; }
+.card { background: #fff; border-radius: 24rpx; padding: 32rpx; margin-bottom: 24rpx; box-shadow: 0 8rpx 32rpx rgba(22, 40, 76, .06); }
+.heading { font-size: 35rpx; font-weight: 700; line-height: 1.3; }
+.hint { color: #657186; font-size: 24rpx; line-height: 1.5; margin-top: 12rpx; }
+.result { background: #eff6ff; }
+.result-label { font-size: 28rpx; color: #355686; font-weight: 600; }
+.total { color: #1677ff; font-size: 72rpx; font-weight: 700; margin: 10rpx 0; }
+.unit { font-size: 32rpx; }
+.section-title { font-size: 34rpx; font-weight: 700; margin-bottom: 8rpx; }
+.row { display: flex; flex-direction: column; border-bottom: 1rpx solid #e9edf3; padding: 20rpx 0; }
+.field-title { color: #26354b; font-size: 28rpx; font-weight: 600; }
+.field-key { margin-left: 12rpx; color: #8c98a9; font-size: 23rpx; font-weight: 400; }
+.picker { margin-top: 12rpx; }
+.picker-value { padding: 20rpx 22rpx; border: 1rpx solid #dce3ed; border-radius: 14rpx; font-size: 29rpx; color: #1c2533; display: flex; justify-content: space-between; }
+.chevron { color: #7c8799; }
+.reset { margin-top: 30rpx; background: #1677ff; color: #fff; border-radius: 16rpx; font-size: 29rpx; }
+.reset::after { border: none; }

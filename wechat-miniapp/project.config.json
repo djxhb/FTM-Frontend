@@ -1,0 +1,11 @@
+{
+  "appid": "wx76e708d4d0d07e05",
+  "projectname": "FTM-Nomogram-Test",
+  "miniprogramRoot": "./",
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "postcss": true,
+    "minified": true
+  }
+}
