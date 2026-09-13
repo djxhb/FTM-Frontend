@@ -1,4 +1,4 @@
-const { calculatePoints } = require('../../utils/calculator');
+const { calculatePoints, riskFromPoints } = require('../../utils/calculator');
 
 const definitions = [
   { key: 'Age', title: 'Age', options: [80, 75, 70, 65, 60, 55, 50, 45, 40, 35, 30, 25], unit: ' years', defaultIndex: 6 },
@@ -25,18 +25,18 @@ function makeFields() {
   }));
 }
 
-function totalFor(fields) {
+function riskFor(fields) {
   const input = {};
   fields.forEach(field => { input[field.key] = field.options[field.selectedIndex]; });
-  return calculatePoints(input).toFixed(1);
+  return riskFromPoints(calculatePoints(input));
 }
 
 Page({
-  data: { fields: [], totalPoints: '0.0' },
+  data: { fields: [], riskPercent: '—' },
 
   onLoad() {
     const fields = makeFields();
-    this.setData({ fields, totalPoints: totalFor(fields) });
+    this.setData({ fields, riskPercent: riskFor(fields) });
   },
 
   onFieldChange(event) {
@@ -45,11 +45,11 @@ Page({
     const fields = this.data.fields.map(field =>
       field.key === key ? Object.assign({}, field, { selectedIndex: index }) : field
     );
-    this.setData({ fields, totalPoints: totalFor(fields) });
+    this.setData({ fields, riskPercent: riskFor(fields) });
   },
 
   onReset() {
     const fields = makeFields();
-    this.setData({ fields, totalPoints: totalFor(fields) });
+    this.setData({ fields, riskPercent: riskFor(fields) });
   }
 });

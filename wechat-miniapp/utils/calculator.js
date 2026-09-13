@@ -70,4 +70,18 @@ function calculatePoints(data) {
   return roundHalfEven(points.reduce((sum, value) => sum + value, 0) * 10) / 10;
 }
 
-module.exports = { calculatePoints };
+// The supplied nomogram places 60 points at 10% and 272 points at 80%.
+// Its risk ticks are approximately linear on a log-odds scale, not a
+// percentage scale. Do not extrapolate a precise value outside the figure.
+function riskFromPoints(points) {
+  if (points < 60) return '<10%';
+  if (points > 272) return '>80%';
+
+  const logitLow = Math.log(0.1 / 0.9);
+  const logitHigh = Math.log(0.8 / 0.2);
+  const logit = logitLow + (points - 60) / (272 - 60) * (logitHigh - logitLow);
+  const percentage = 100 / (1 + Math.exp(-logit));
+  return percentage.toFixed(1) + '%';
+}
+
+module.exports = { calculatePoints, riskFromPoints };

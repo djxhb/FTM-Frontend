@@ -1,13 +1,13 @@
 <view class="container">
   <view class="card header">
-    <view class="heading">Nomogram Points Calculator</view>
-    <view class="hint">Select values to update the score instantly on your device.</view>
+    <view class="heading">Breast Cancer Risk Calculator</view>
+    <view class="hint">Select values to update the estimated risk on your device.</view>
   </view>
 
   <view class="card result">
-    <view class="result-label">Total Points</view>
-    <view class="total">{{totalPoints}} <text class="unit">pts</text></view>
-    <view class="hint">Test version for calculation checks only. Not for clinical decisions.</view>
+    <view class="result-label">Risk of Breast Cancer</view>
+    <view class="total">{{riskPercent}}</view>
+    <view class="hint">Chart-derived estimate; not for clinical decisions.</view>
   </view>
 
   <view class="card">

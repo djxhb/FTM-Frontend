@@ -11,4 +11,4 @@ This project is separate from the web test version at the repository root. All 1
 
 If you already created an empty project in `F:\DB_2`, back it up first. You can copy the contents of this directory into `F:\DB_2`, replace files with the same names, and import `F:\DB_2` again. The original template's `miniprogram` directory is not needed.
 
-This test version displays only the score calculated with the same formula as the web test. It does not provide a diagnosis, outcome probability, or clinical recommendation.
+This test version keeps the web test's points calculation internally, but displays only the chart-derived **Risk of Breast Cancer** percentage. The supplied nomogram places 60 points at 10% and 272 points at 80%; the displayed values between them use interpolation on the chart's log-odds scale. Outside that plotted range, the app shows `<10%` or `>80%` instead of extrapolating a precise percentage. The result is an estimate from the supplied chart, not a diagnosis or clinical recommendation.
