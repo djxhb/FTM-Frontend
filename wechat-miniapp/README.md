@@ -1,14 +1,14 @@
-# 列线图评分微信小程序（测试版）
+# Nomogram Calculator WeChat Mini Program (Test Version)
 
-项目独立于根目录的网页测试版；无云开发、无接口、无外部资源，12 项参数在设备本地计算。
+This project is separate from the web test version at the repository root. All 12 inputs are calculated on the device. It does not use cloud development, a backend API, or external resources.
 
-## 导入
+## Import
 
-1. 在微信开发者工具首页选择“导入项目”，目录指向**本目录** `wechat-miniapp`（不要只选择里面的 `pages`）。
-2. 检查 AppID 与你的小程序账号一致；如不一致，在项目设置中修改 AppID。
-3. 选择“小程序”和“不使用云服务”，点击“导入/创建”，进入项目后点击“编译”。
-4. 在模拟器中修改任意选项，验证总分实时更新；点击“恢复默认值”验证复位。可通过开发者工具“预览”生成体验二维码。
+1. In WeChat DevTools, choose **Import Project** and select this `wechat-miniapp` directory, not the `pages` subdirectory.
+2. Verify that the AppID matches your Mini Program account. If necessary, update it in the project settings.
+3. Select **Mini Program** and **Do not use cloud services**, then import the project and click **Compile**.
+4. Change a value in the simulator to check that the total updates. Use **Reset to Defaults** to restore the initial values. DevTools can generate a test QR code using **Preview**.
 
-如果已在 `F:\DB_2` 创建了空白模板，也可以先备份旧项目，然后将此目录中的文件全部复制到 `F:\DB_2`，覆盖同名文件，最后在开发者工具中重新导入 `F:\DB_2`。不需要保留原模板的 `miniprogram` 目录。
+If you already created an empty project in `F:\DB_2`, back it up first. You can copy the contents of this directory into `F:\DB_2`, replace files with the same names, and import `F:\DB_2` again. The original template's `miniprogram` directory is not needed.
 
-这个版本只显示按网页测试公式计算的总分，不提供诊断、预后概率或临床建议。提交公开审核前需按账号主体和服务类目核对平台要求。
+This test version displays only the score calculated with the same formula as the web test. It does not provide a diagnosis, outcome probability, or clinical recommendation.

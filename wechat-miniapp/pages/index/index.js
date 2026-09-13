@@ -1,18 +1,18 @@
 const { calculatePoints } = require('../../utils/calculator');
 
 const definitions = [
-  { key: 'Age', title: '年龄', options: [80, 75, 70, 65, 60, 55, 50, 45, 40, 35, 30, 25], unit: '岁', defaultIndex: 6 },
+  { key: 'Age', title: 'Age', options: [80, 75, 70, 65, 60, 55, 50, 45, 40, 35, 30, 25], unit: ' years', defaultIndex: 6 },
   { key: 'BMI', title: 'BMI', options: [18, 22, 26, 30, 34], defaultIndex: 2 },
-  { key: 'Menstrual', title: '绝经状态', options: ['Postmenopausal', 'Premenopausal'], labels: ['绝经后', '绝经前'], defaultIndex: 0 },
-  { key: 'Parity', title: '产次', options: [0, 1, 2, 3, 4, 5], defaultIndex: 1 },
-  { key: 'Breastfeeding', title: '哺乳时长', options: [24, 22, 20, 18, 16, 14, 12, 10, 8, 6, 4, 2, 0], unit: '月', defaultIndex: 6 },
-  { key: 'FamilyHistory', title: '家族史', options: ['None', 'Yes'], labels: ['无', '有'], defaultIndex: 0 },
-  { key: 'TumorSize', title: '肿瘤大小', options: [0, 1, 2, 3, 4, 5, 6, 7, 8], unit: 'cm', defaultIndex: 2 },
-  { key: 'Grade', title: '组织学分级', options: ['I', 'II', 'III'], defaultIndex: 0 },
+  { key: 'Menstrual', title: 'Menstrual Status', options: ['Postmenopausal', 'Premenopausal'], labels: ['Postmenopausal', 'Premenopausal'], defaultIndex: 0 },
+  { key: 'Parity', title: 'Parity', options: [0, 1, 2, 3, 4, 5], defaultIndex: 1 },
+  { key: 'Breastfeeding', title: 'Breastfeeding', options: [24, 22, 20, 18, 16, 14, 12, 10, 8, 6, 4, 2, 0], unit: ' months', defaultIndex: 6 },
+  { key: 'FamilyHistory', title: 'Family History', options: ['None', 'Yes'], labels: ['No', 'Yes'], defaultIndex: 0 },
+  { key: 'TumorSize', title: 'Tumor Size', options: [0, 1, 2, 3, 4, 5, 6, 7, 8], unit: ' cm', defaultIndex: 2 },
+  { key: 'Grade', title: 'Grade', options: ['I', 'II', 'III'], defaultIndex: 0 },
   { key: 'ER', title: 'ER', options: [100, 70, 40, 10], unit: '%', defaultIndex: 1 },
   { key: 'Ki67', title: 'Ki-67', options: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90], unit: '%', defaultIndex: 2 },
-  { key: 'LNs', title: '淋巴结转移数', options: ['0', '1~3', '>=4'], labels: ['0', '1–3', '≥4'], defaultIndex: 0 },
-  { key: 'LVI', title: '脉管侵犯', options: ['None', 'Yes'], labels: ['无', '有'], defaultIndex: 0 }
+  { key: 'LNs', title: 'Positive LNs', options: ['0', '1~3', '>=4'], labels: ['0', '1–3', '≥4'], defaultIndex: 0 },
+  { key: 'LVI', title: 'LVI', options: ['None', 'Yes'], labels: ['No', 'Yes'], defaultIndex: 0 }
 ];
 
 function makeFields() {

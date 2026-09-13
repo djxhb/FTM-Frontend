@@ -1,23 +1,23 @@
 <view class="container">
   <view class="card header">
     <view class="heading">Nomogram Points Calculator</view>
-    <view class="hint">选择参数，分数会在本机实时更新。</view>
+    <view class="hint">Select values to update the score instantly on your device.</view>
   </view>
 
   <view class="card result">
-    <view class="result-label">Total Points · 总分</view>
+    <view class="result-label">Total Points</view>
     <view class="total">{{totalPoints}} <text class="unit">pts</text></view>
-    <view class="hint">功能测试版，仅用于验证计算，不用于临床决策。</view>
+    <view class="hint">Test version for calculation checks only. Not for clinical decisions.</view>
   </view>
 
   <view class="card">
-    <view class="section-title">输入参数</view>
+    <view class="section-title">Input Parameters</view>
     <view wx:for="{{fields}}" wx:key="key" class="row">
       <view class="field-title">{{item.title}} <text class="field-key">{{item.key}}</text></view>
       <picker class="picker" mode="selector" range="{{item.labels}}" value="{{item.selectedIndex}}" data-key="{{item.key}}" bindchange="onFieldChange">
         <view class="picker-value">{{item.labels[item.selectedIndex]}} <text class="chevron">⌄</text></view>
       </picker>
     </view>
-    <button class="reset" bindtap="onReset">恢复默认值</button>
+    <button class="reset" bindtap="onReset">Reset to Defaults</button>
   </view>
 </view>
